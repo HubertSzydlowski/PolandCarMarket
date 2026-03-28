@@ -1,8 +1,8 @@
 # Poland Car Market
 
-**Poland Car Market (PCM)** is a modern web application inspired by popular automotive classified services. The project aims to create a functional and intuitive platform that allows users to sell, buy, and browse vehicle advertisements in a clear and user-friendly way. PCM is designed to compete with existing solutions on the market through high quality, security, and a rich set of features.
+**Poland Car Market (PCM)** is a professional, full-stack web application designed as a comprehensive automotive marketplace. The platform enables users to add, manage, and browse vehicle advertisements with a focus on intuitive UI, robust security, and advanced data analysis. Inspired by industry leaders, PCM provides a secure and scalable environment for both individual sellers and professional car dealers.
 
-## **🧑‍💻 Author**
+## 🧑‍💻 Author
 
 ### Hubert Szydłowski
 
@@ -14,8 +14,8 @@
 - **Spring Data JPA (Hibernate)** – database access
 - **PostgreSQL** – relational database
 - **Maven** – project management
-- **Mockito & MockMVC** *(planned implementation)* – unit and integration testing
-- **Postman** *(planned to be replaced)* – endpoint testing
+- **Mockito & MockMVC** * – automated unit and integration testing
+- **Postman** – endpoint testing
 - **OpenAPI** – API documentation
 - **Lombok** – reduces boilerplate code
 - **React** – frontend framework
@@ -23,181 +23,356 @@
 - **IntelliJ IDEA** – IDE
 - **Git** – version control
 
-## ✨ Current Features
+## ✨ Key Features
 
-The project is in an advanced stage of backend development and is ready for the next phases. All essential features related to managing advertisements, vehicles, and users have already been implemented. The backend currently supports full CRUD operations and other key functionalities such as advanced search, filtering, and user authorization. The next step is to implement unit and integration tests using Mockito & MockMVC, followed by frontend development. The application currently includes the following features:
+The application provides a complete set of features for three distinct user roles: Guest, Registered User, and Administrator.
 
-### 1. Basic CRUD Features
+### 1. Advanced Search & Discovery
+* **Multi-criteria Filtering**: Users can narrow down results using a wide range of parameters: brand, model, fuel type, price range, mileage, power, year of production, and even the number of seats.
+* **Dynamic Sorting**: Results can be ordered by price or mileage (ascending/descending) to find the best deals quickly.
+* **Server-side Pagination**: High performance is maintained even with large datasets by processing pages on the backend.
+* **Interactive Location**: Integration with Google Maps API allows for precise visualization of the vehicle's location.
 
-- Manage data related to vehicles and users:
-  - **Add new records** to the database.
-  - **Retrieve data** by unique ID.
-  - **Retrieve all data**.
-  - **Update existing records**.
-  - **Delete records** from the database.
-- Support for a relational database using **Spring Data JPA** and **Hibernate**.
-- Store vehicle photos on the local disk:
-  - **File upload mechanism** on the server.
-  - Only **file paths** are stored in the database.
+### 2. Professional User & Ad Management
+* **Full Ad Lifecycle**: Registered users can create, edit, and delete their own advertisements, ensuring all technical data is up to date.
+* **Smart Media Gallery**: Support for multiple high-quality photos per vehicle with a dedicated "Main Photo" selector for the search list.
+* **Favorites System**: A "Saved Ads" feature allows users to keep track of interesting offers across sessions.
+* **Automated Email Communication**: Built-in mailer for account activation (verification links) and secure password recovery.
 
-### 2. Pagination, Sorting, and Advanced Search
+### 3. Business Intelligence & Analytics
+The system features a dedicated analytical engine that processes data for both users and administrators:
+* **User Statistics**: Sellers can track the effectiveness of their ads and view price/mileage trends for their vehicles.
+* **Global Market Reports**: Administrators have access to aggregated reports on top-selling brands, most popular fuel types, and engine power distribution.
+* **Admin Dashboard**: Advanced monitoring of active users, total advertisements, and overall system health.
 
-- Mechanisms to handle large datasets efficiently:
-  - **Sorting** by key attributes such as:
-    - **Vehicle price**
-    - **Mileage**
-  - **Pagination** to divide results into pages, improving performance with large datasets.
-- Advanced **filtering** based on selected criteria:
-  - **Fuel type** (e.g., Diesel, Petrol, Hybrid)
-  - **Vehicle condition** (e.g., New, Used, Damaged)
-  - **Number of seats**
-  - **Engine power**
-  - And more
-- Queries are generated **dynamically** based on the provided search criteria, ensuring **precise results**.
+### 4. Enterprise-Grade Security
+* **Stateless Auth (JWT)**: Secure sessions using a double-token approach: short-lived Access Tokens and HttpOnly Refresh Tokens to prevent XSS and session hijacking.
+* **Role-Based Access Control (RBAC)**: Fine-grained permissions managed by Spring Security.
+* **Data Protection**: All sensitive user information is encrypted using the BCrypt hashing algorithm.
+* **Centralized Exception Handling**: A dedicated module translates technical errors into user-friendly HTTP responses, ensuring a stable API.
 
-### 3. User System and Authorization
+## 🖼️ Interface Preview
 
-- **User roles** implemented using **Spring Security** and **JWT**:
-  - **Administrator**: full access to edit and remove advertisements.
-  - **Registered user**: manage their own advertisements.
-  - **Guest**: browse advertisements only.
-- JWT-based authorization provides **secure access** to application resources.
-- Passwords secured with **Bcrypt**.
-- **Refresh and Access Tokens** stored in **cookies**, allowing for **automatic login** and **session refresh**.
-- **Email verification** during account registration.
-- **Password recovery** via email.
+<img width="1920" height="826" alt="screencapture-localhost-3000-2025-11-18-08_18_56" src="https://github.com/user-attachments/assets/d50f040d-1675-4e31-a2a8-505afd09adbf" />
+<img width="1920" height="1562" alt="screencapture-localhost-3000-offers-2025-11-18-08_24_36" src="https://github.com/user-attachments/assets/f2eaa35c-ae6d-4245-85b4-fc4a7c365964" />
+<img width="1920" height="1377" alt="screencapture-localhost-3000-offers-149-2025-11-18-08_23_34" src="https://github.com/user-attachments/assets/eeb59779-f8c4-4f23-89d0-86af5c35a36a" />
+<img width="1920" height="1948" alt="screencapture-localhost-3000-user-offers-150-edit-2025-11-18-08_26_23" src="https://github.com/user-attachments/assets/64351f73-86f6-49b5-b613-93e3d03ad99e" />
+<img width="1920" height="2950" alt="screencapture-localhost-3000-user-dashboard-2025-11-18-08_25_08" src="https://github.com/user-attachments/assets/91f7a7c7-d537-486a-bec9-fe39918cdb0a" />
 
-### 4. Admin/User Panel and Reporting
 
-- **Admin panel**:
-  - **Moderate Advertisements** (remove rule-violating posts).
-  - **Manage users**.
-- **User panel**:
-  - **My Advertisements** section with preview and editing.
-  - **Favorites list**.
-- **Reporting and Analytics**:
-  - **For users**:
-    - **View statistics** of their own **Advertisements**.
-    - **Vehicle price statistics** based on criteria.
-  - **For administrators**:
-    - **Technical statistics** on app operation.
-    - **User and vehicle statistics**.
-
-## 🚀 Development Plan
-
-### Backend:
-
-1. **Implementation of unit and integration tests (Mockito & MockMVC)**  
-   Add unit and integration tests using Mockito and MockMVC to ensure reliability and facilitate error detection during development.
-
-2. **API optimization and frontend compatibility**  
-   Optimize existing API endpoints to ensure smooth interaction with the frontend, enabling seamless data exchange between backend and UI.
-
-### Frontend:
-
-1. **React integration**  
-   Develop a dynamic user interface using React to enable efficient state management and responsive rendering based on data changes.
-
-2. **Responsive form design**  
-   Ensure responsive design for forms, making the application convenient to use on both desktops and mobile devices.
-
-3. **Google Maps API integration for vehicle location visualization**  
-   Integration with Google Maps API will allow users to visualize vehicle locations on a map, making it easier to find **Advertisements** in specific geographic areas.
-
-## 🧱 Backend Structure
+## ☕ Backend Structure
 
 ```plaintext
 src/
- ├── main/
- │    ├── java/
- │    │    └── com.app/
- │    │            ├── config/
- │    │            │    ├── CorsConfig.java
- │    │            │    └── OpenApiConfig.java
- │    │            │
- │    │            ├── controller/
- │    │            │    ├── AdminPageController.java
- │    │            │    ├── AdvertisementController.java
- │    │            │    ├── EmailController.java
- │    │            │    ├── UserController.java
- │    │            │    ├── UserPageController.java
- │    │            │    ├── VehicleController.java
- │    │            │    └── VehiclePhotoController.java
- │    │            │
- │    │            ├── dto/
- │    │            │    ├── AdminPageDto.java
- │    │            │    ├── AdvertisementDto.java
- │    │            │    ├── EmailDto.java
- │    │            │    ├── UserDto.java
- │    │            │    ├── UserPageDto.java
- │    │            │    ├── VehicleDto.java
- │    │            │    └── VehiclePhotoDto.java
- │    │            │
- │    │            ├── exception/
- │    │            │    ├── AdminPageExceptionHandler.java
- │    │            │    ├── AdvertisementExceptionHandler.java
- │    │            │    ├── EmailExceptionHandler.java
- │    │            │    ├── GlobalExceptionHandler.java
- │    │            │    ├── SecurityExceptionHandler.java
- │    │            │    ├── UserExceptionHandler.java
- │    │            │    ├── UserPageExceptionHandler.java
- │    │            │    ├── VehicleExceptionHandler.java
- │    │            │    └── VehiclePhotoExceptionHandler.java
- │    │            │
- │    │            ├── model/
- │    │            │    ├── AdminPage.java
- │    │            │    ├── Advertisement.java
- │    │            │    ├── Email.java
- │    │            │    ├── User.java
- │    │            │    ├── UserPage.java
- │    │            │    ├── Vehicle.java
- │    │            │    └── VehiclePhoto.java
- │    │            │
- │    │            ├── repository/
- │    │            │    ├── AdminPageRepository.java
- │    │            │    ├── AdvertisementRepository.java
- │    │            │    ├── EmailRepository.java
- │    │            │    ├── UserRepository.java
- │    │            │    ├── UserPageRepository.java
- │    │            │    ├── VehicleRepository.java
- │    │            │    └── PhotoRepository.java
- │    │            │
- │    │            ├── security/
- │    │            │    ├── CustomUserDetailsService.java
- │    │            │    ├── JWTFilter.java
- │    │            │    ├── JWTUtility.java
- │    │            │    └── SecurityConfig.java
- │    │            │
- │    │            ├── service/
- │    │            │    ├── AdminPageService.java
- │    │            │    ├── AdvertisementService.java
- │    │            │    ├── EmailService.java
- │    │            │    ├── UserService.java
- │    │            │    ├── UserPageService.java
- │    │            │    ├── VehicleService.java
- │    │            │    └── VehiclePhotoService.java
- │    │            │
- │    │            ├── utils/
- │    │            │    └── PasswordEncryptor.java
- │    │            │
- │    │            └── BackendApplication.java
- │    │
- │    └── resources/
- │         ├── api_docs/
- │         		└── api-docs.json
- │         ├── diagram_database/
- │         		└── diagram_db.png
- │         ├── static/
- │         ├── templates/
- │         └── application.properties
- │
- └── test/
-      ├── java/
-           ├── com.app.controller/
-      	   ├── postman_tests.json
-      	   	   └── PCM.postman_collection.json
-      	   └── run
-      	   	   └── BackendApplicationTests.java
+│
+├── main/
+│   ├── java/
+│   │   └── com/app/
+│   │       ├── config/
+│   │       │   ├── CorsConfig.java
+│   │       │   └── OpenApiConfig.java
+│   │       │
+│   │       ├── controller/
+│   │       │   ├── AdminPageController.java
+│   │       │   ├── AdvertisementController.java
+│   │       │   ├── EmailController.java
+│   │       │   ├── UserController.java
+│   │       │   ├── UserPageController.java
+│   │       │   ├── VehicleController.java
+│   │       │   └── VehiclePhotoController.java
+│   │       │
+│   │       ├── dto/
+│   │       │   ├── AdminPageDto.java
+│   │       │   ├── AdvertisementDto.java
+│   │       │   ├── EmailDto.java
+│   │       │   ├── UserDto.java
+│   │       │   ├── UserPageDto.java
+│   │       │   ├── VehicleDto.java
+│   │       │   └── VehiclePhotoDto.java
+│   │       │
+│   │       ├── exception/
+│   │       │   ├── AdminPageExceptionHandler.java
+│   │       │   ├── AdvertisementExceptionHandler.java
+│   │       │   ├── EmailExceptionHandler.java
+│   │       │   ├── GlobalExceptionHandler.java
+│   │       │   ├── SecurityExceptionHandler.java
+│   │       │   ├── UserExceptionHandler.java
+│   │       │   ├── UserPageExceptionHandler.java
+│   │       │   ├── VehicleExceptionHandler.java
+│   │       │   └── VehiclePhotoExceptionHandler.java
+│   │       │
+│   │       ├── model/
+│   │       │   ├── AdminPage.java
+│   │       │   ├── Advertisement.java
+│   │       │   ├── Email.java
+│   │       │   ├── User.java
+│   │       │   ├── UserPage.java
+│   │       │   ├── Vehicle.java
+│   │       │   └── VehiclePhoto.java
+│   │       │
+│   │       ├── repository/
+│   │       │   ├── AdminPageRepository.java
+│   │       │   ├── AdvertisementRepository.java
+│   │       │   ├── EmailRepository.java
+│   │       │   ├── UserRepository.java
+│   │       │   ├── UserPageRepository.java
+│   │       │   ├── VehicleRepository.java
+│   │       │   └── PhotoRepository.java
+│   │       │
+│   │       ├── security/
+│   │       │   ├── CustomUserDetailsService.java
+│   │       │   ├── JWTFilter.java
+│   │       │   ├── JWTUtility.java
+│   │       │   └── SecurityConfig.java
+│   │       │
+│   │       ├── service/
+│   │       │   ├── AdminPageService.java
+│   │       │   ├── AdvertisementService.java
+│   │       │   ├── EmailService.java
+│   │       │   ├── UserService.java
+│   │       │   ├── UserPageService.java
+│   │       │   ├── VehicleService.java
+│   │       │   └── VehiclePhotoService.java
+│   │       │
+│   │       ├── utils/
+│   │       │   └── PasswordEncryptor.java
+│   │       │
+│   │       └── BackendApplication.java
+│   │
+│   └── resources/
+│       ├── api_docs/
+│       │   └── api-docs.json
+│       ├── static/
+│       ├── templates/
+│       └── application.properties
+│
+└── test/
+    ├── java/
+    │   ├── postman_tests.json
+    │   ├── PCM.postman_collection.json
+    │   ├── run/
+    │   │   └── BackendApplicationTests.java
+    │   └── com/app/controller/
+    │       ├── user/
+    │       │   ├── LoginEndpointTest.java
+    │       │   ├── RefreshTokenEndpointTest.java
+    │       │   └── LogoutEndpointTest.java
+    │       └── email/
+    │           ├── VerifyEndpointTest.java
+    │           ├── ResetPasswordRequestEndpointTest.java
+    │           └── ResetPasswordEndpointTest.java
+```
+
+## ⚛️ Frotend Structure
+
+```plaintext
+frontend/
+│
+├── public/
+│   └── ...
+│
+└── src/
+    │
+    ├── api/
+    │   ├── .openapi-generator/
+    │   │   ├── FILES
+    │   │   └── VERSION
+    │   ├── docs/
+    │   │   └── ...
+    │   ├── src/
+    │   │   ├── api/
+    │   │   │   ├── AdminPageControllerApi.js
+    │   │   │   ├── AdvertisementControllerApi.js
+    │   │   │   ├── EmailControllerApi.js
+    │   │   │   ├── UserControllerApi.js
+    │   │   │   ├── UserPageControllerApi.js
+    │   │   │   ├── VehicleControllerApi.js
+    │   │   │   └── VehiclePhotoControllerApi.js
+    │   │   ├── model/
+    │   │   │   └── ...
+    │   │   ├── ApiClient.js
+    │   │   └── index.js
+    │   ├── test/
+    │   │   ├── api/
+    │   │   │   ├── AdminPageControllerApi.spec.js
+    │   │   │   ├── AdvertisementControllerApi.spec.js
+    │   │   │   ├── EmailControllerApi.spec.js
+    │   │   │   ├── UserControllerApi.spec.js
+    │   │   │   ├── UserPageControllerApi.spec.js
+    │   │   │   ├── VehicleControllerApi.spec.js
+    │   │   │   └── VehiclePhotoControllerApi.spec.js
+    │   │   └── model/
+    │   │       └── ...
+    │   └── ...
+    │
+    ├── components/
+    │   ├── Approuter.js
+    │   ├── CriticalError.js
+    │   ├── Forbidden.js
+    │   ├── MyAccount.js
+    │   ├── NotFound.js
+    │   ├── ServerError.js
+    │   ├── WelcomePage.js
+    │   │
+    │   ├── UserComponent/
+    │   │   ├── Auth/
+    │   │   │   ├── LoginForm.js
+    │   │   │   ├── LogoutButton.js
+    │   │   │   └── TokenRefresher.js
+    │   │   ├── Favorites/
+    │   │   │   ├── UserFavorites.js
+    │   │   │   ├── AddToFavoritesButton.js
+    │   │   │   └── RemoveFromFavoritesButton.js
+    │   │   ├── UserManagement/
+    │   │   │   ├── UserList.js
+    │   │   │   ├── UserDetails.js
+    │   │   │   ├── UserCreateForm.js
+    │   │   │   ├── UserEditForm.js
+    │   │   │   └── UserDeleteButton.js
+    │   │   └── structureUserComponent.md
+    │   │
+    │   ├── UserPageComponent/
+    │   │   ├── Users/
+    │   │   │   └── Favourites/
+    │   │   │       ├── FavoritesList.js
+    │   │   │       ├── AddToFavoritesButton.js
+    │   │   │       └── RemoveFromFavoritesButton.js
+    │   │   ├── Advertisments/
+    │   │   │   ├── AdvertisementList.js
+    │   │   │   ├── AdvertisementDetails.js
+    │   │   │   ├── AdvertisementCreateForm.js
+    │   │   │   ├── AdvertisementEditForm.js
+    │   │   │   └── AdvertisementDeleteButton.js
+    │   │   ├── Vehicles/
+    │   │   │   ├── VehicleList.js
+    │   │   │   ├── VehicleDetails.js
+    │   │   │   ├── VehicleCreateForm.js
+    │   │   │   ├── VehicleEditForm.js
+    │   │   │   └── VehicleDeleteButton.js
+    │   │   ├── Offers/
+    │   │   │   ├── OfferCreateForm.js
+    │   │   │   ├── OfferDeleteButton.js
+    │   │   │   ├── OfferDetails.js
+    │   │   │   ├── OfferEditForm.js
+    │   │   │   └── OfferList.js
+    │   │   ├── VehiclePhotos/
+    │   │   │   ├── VehiclePhotoList.js
+    │   │   │   ├── VehiclePhotoDetails.js
+    │   │   │   ├── VehiclePhotoUploadForm.js
+    │   │   │   └── VehiclePhotoDeleteButton.js
+    │   │   ├── UserDashboard.js
+    │   │   ├── UserMyAccount.js
+    │   │   └── structureUserPageComponent.md
+    │   │
+    │   ├── AdminPageComponent/
+    │   │   ├── Users/
+    │   │   │   ├── UserList.js
+    │   │   │   ├── UserDetails.js
+    │   │   │   ├── UserCreateForm.js
+    │   │   │   ├── UserEditForm.js
+    │   │   │   ├── UserDeleteButton.js
+    │   │   │   └── Favourites/
+    │   │   │       ├── FavoritesList.js
+    │   │   │       ├── AddToFavoritesButton.js
+    │   │   │       └── RemoveFromFavoritesButton.js
+    │   │   ├── Advertisments/
+    │   │   │   ├── AdvertisementList.js
+    │   │   │   ├── AdvertisementDetails.js
+    │   │   │   ├── AdvertisementCreateForm.js
+    │   │   │   ├── AdvertisementEditForm.js
+    │   │   │   └── AdvertisementDeleteButton.js
+    │   │   ├── Vehicles/
+    │   │   │   ├── VehicleList.js
+    │   │   │   ├── VehicleDetails.js
+    │   │   │   ├── VehicleCreateForm.js
+    │   │   │   ├── VehicleEditForm.js
+    │   │   │   └── VehicleDeleteButton.js
+    │   │   ├── Offers/
+    │   │   │   ├── OfferCreateForm.js
+    │   │   │   ├── OfferDeleteButton.js
+    │   │   │   ├── OfferDetails.js
+    │   │   │   ├── OfferEditForm.js
+    │   │   │   └── OfferList.js
+    │   │   ├── VehiclePhotos/
+    │   │   │   ├── VehiclePhotoList.js
+    │   │   │   ├── VehiclePhotoDetails.js
+    │   │   │   ├── VehiclePhotoUploadForm.js
+    │   │   │   └── VehiclePhotoDeleteButton.js
+    │   │   ├── AdminDashboard.js
+    │   │   ├── AdminMyAccount.js
+    │   │   └── structureAdminComponent.md
+    │   │
+    │   ├── EmailComponent/
+    │   │   ├── EmailVerificationForm.js
+    │   │   ├── ResetPasswordForm.js
+    │   │   ├── ResetPasswordRequestForm.js
+    │   │   └── structureEmailComponent.md
+    │   │
+    │   ├── AdvertisementComponent/
+    │   │   ├── AdvertisementCreateForm.js
+    │   │   ├── AdvertisementDeleteButton.js
+    │   │   ├── AdvertisementDetails.js
+    │   │   ├── AdvertisementEditForm.js
+    │   │   ├── AdvertisementList.js
+    │   │   └── structureAdvertisementComponent.md
+    │   │
+    │   ├── OffersComponent/
+    │   │   ├── OfferCreateForm.js
+    │   │   ├── OfferDeleteButton.js
+    │   │   ├── OfferDetails.js
+    │   │   ├── OfferEditForm.js
+    │   │   ├── OfferList.js
+    │   │   └── structureOfferComponent.md
+    │   │
+    │   ├── VehicleComponent/
+    │   │   ├── VehicleCreateForm.js
+    │   │   ├── VehicleDeleteButton.js
+    │   │   ├── VehicleDetails.js
+    │   │   ├── VehicleEditForm.js
+    │   │   ├── VehicleList.js
+    │   │   └── structureVehicleComponent.md
+    │   │
+    │   └── VehiclePhotoComponent/
+    │       ├── VehiclePhotoUploadForm.js
+    │       ├── VehiclePhotoDeleteButton.js
+    │       ├── VehiclePhotoDetails.js
+    │       ├── VehiclePhotoList.js
+    │       └── structureVehicleComponent.md
+    │
+    ├── services/
+    │   ├── apiClientInstance.js
+    │   ├── TokenManager.js
+    │   ├── UserServices/
+    │   │   ├── authService.js
+    │   │   ├── favoritesService.js
+    │   │   └── userService.js
+    │   ├── EmailServices/
+    │   │   └── EmailService.js
+    │   ├── VehicleServices/
+    │   │   └── vehicleService.js
+    │   ├── OfferServices/
+    │   │   └── OfferService.js
+    │   ├── VehiclePhotoServices/
+    │   │   └── vehiclePhotoService.js
+    │   ├── AdminPageServices/
+    │   │   ├── AdminPageAdvertisementsService.js
+    │   │   ├── AdminPageDashboardService.js
+    │   │   ├── AdminPageFavouritesService.js
+    │   │   ├── AdminPageOfferService.js
+    │   │   ├── AdminPageUserService.js
+    │   │   ├── AdminPageVehiclePhotoService.js
+    │   │   └── AdminPageVehicleService.js
+    │   ├── UserPageServices/
+    │   │   ├── UserPageAdvertisementsService.js
+    │   │   ├── UserPageDashboardService.js
+    │   │   ├── UserPageFavouritesService.js
+    │   │   ├── UserPageOfferService.js
+    │   │   ├── UserPageVehiclePhotoService.js
+    │   │   └── UserPageVehicleService.js
+    │   └── AdvertisementServices/
+    │       └── advertisementService.js
+    │
+    └── ...
 ```
 
 ## 🧪 Endpoint Testing (Postman Collection)
@@ -206,6 +381,7 @@ src/
     ├── PHOTO/
     │   ├── POST PHOTO
     │   ├── GET PHOTO ALL
+    │   ├── GET PHOTO BY VEHICLE
     │   ├── GET PHOTO BY ID
     │   └── DELETE PHOTO
     │
@@ -255,6 +431,8 @@ src/
     │   ├── GET VEHICLE ALL SORTED PRICE
     │   ├── GET VEHICLE ALL SORTED MILEAGE
     │   ├── GET VEHICLE BY ID
+    │   ├── GET VEHICLE BY USER
+    │   ├── GET VEHICLE BY ADVERTISMENT
     │   ├── DELETE VEHICLE
     │   └── PUT VEHICLE
     │
@@ -302,12 +480,11 @@ src/
         │   ├── POST USER ADMIN
         │   ├── PUT USER ADMIN
         │   ├── GET FAVS USER ADS ADMIN
-        │   ├── GET FAVS USER ADS SPECIFIC ADMIN
-        │   ├── POST FAVS USER ADS SPECIFIC ADMIN
-        │   └── DELETE FAVS USER ADS SPECIFIC ADMIN
+        │   ├── POST FAVS USER ADS ADMIN
+        │   └── DELETE FAVS USER ADS ADMIN
         └── GET STATS USER
 ```
 
 ## 🗃️  Database Diagram
 
-![Database Diagram](https://github.com/HubertSzydlowski/PolandCarMarket/blob/master/backend/src/main/resources/diagram_database/diagram_db.png)
+<img width="2028" height="2492" alt="db_diagram" src="https://github.com/user-attachments/assets/30c963c5-b50c-4d77-8908-959f6f4fb458" />
