@@ -1,0 +1,3160 @@
+{
+	"info": {
+		"_postman_id": "14780736-8bf8-4fa9-bc24-d3e8f79b6317",
+		"name": "PCM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34135515"
+	},
+	"item": [
+		{
+			"name": "PHOTO",
+			"item": [
+				{
+					"name": "POST PHOTO",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicleId",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "isMain",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicle-photos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle-photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PHOTO ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/vehicle-photos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle-photos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PHOTO BY ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/vehicle-photos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle-photos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PHOTO",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU3NjUwNjUsImV4cCI6MTc0NTc2ODY2NX0.OUiTdqVyjTMWjN_BXJWZZHLrITrkrhH_5ba_cNUUybk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/vehicle-photos/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicle-photos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "POST USER",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuser20\",\r\n  \"email\": \"pamehit240@f5url.com\",\r\n  \"password\": \"securepassword20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuserxxx\",\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"securepassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbXSwiaWF0IjoxNzQwMDUwNzU5LCJleHAiOjE3NDAwNTA4MTl9.gntD0kjcyaqnnRLUPOT9oUDNIBVAPlNBPe1ORa9mvLc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"securepassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"testuser@example.com\",\r\n  \"password\": \"securepassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET FAVS USER ADS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc1OTkxOCwiZXhwIjoxNzQ1NzYzNTE4fQ.mFtBKtZWIs0FO7zLGynrwh_mHbr-QMvrcCiV7PrxOyk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/20/favorites",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"20",
+								"favorites"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST FAVS USER ADS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc2MDI5MywiZXhwIjoxNzQ1NzYzODkzfQ.hGG2V63YZUN2Tjvln8T2L5cKi9fhrnlvfTGmHYM6nvg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/20/favorites/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"20",
+								"favorites",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE FAVS USER ADS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc2MDI5MywiZXhwIjoxNzQ1NzYzODkzfQ.hGG2V63YZUN2Tjvln8T2L5cKi9fhrnlvfTGmHYM6nvg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/users/20/favorites/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"20",
+								"favorites",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER_PAGE",
+			"item": [
+				{
+					"name": "ADVERTISMENT MANAGEMENT",
+					"item": [
+						{
+							"name": "GET ADVERTISMENT ALL SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQyMTA3NSwiZXhwIjoxNzQ1NDIxMTM1fQ.cu_DLD8cyV3zhB19P6CI7FScdaO21NEO4wG7nvlh54I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/advertisements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"advertisements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST ADVERTISMENT SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc0NzQwNSwiZXhwIjoxNzQ1NzUxMDA1fQ.hvBgm-Wxpb1nQOgFT9D5hMdy3R6pFDQi71dMrbv1Ih8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Idealny pojazd dla rodziny – sprawdź ofertę\", \r\n  \"userId\": 26\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/advertisements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"advertisements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ADVERTISMENT BY ID SPECIFIC USER",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQyMTI5OSwiZXhwIjoxNzQ1NDIxMzU5fQ.J2Ma5HckKWJxVqybxQX1Pg3l9LE0_d5b6mpcicrO8Kk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/advertisements/69",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"advertisements",
+										"69"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT ADVERTISMENT SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQyMTMzMywiZXhwIjoxNzQ1NDIxMzkzfQ.CaggriAjdK7K9hAD5nml-ryX3rMP1J1UDNnJ-_p-OqY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Super EKSTRA XD auto na sprzedaż\",\r\n  \"userId\": 26\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/advertisements/69",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"advertisements",
+										"69"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE ADVERTISMENT SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQyMTMzMywiZXhwIjoxNzQ1NDIxMzkzfQ.CaggriAjdK7K9hAD5nml-ryX3rMP1J1UDNnJ-_p-OqY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/advertisements/69",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"advertisements",
+										"69"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ADVERTISMENT BY USER SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTUwODYwMywiZXhwIjoxNzQ1NTEyMjAzfQ.czChOSMKB_e0sRsaYUNsuh4Yv70od93aDUKbsxnnJFk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/advertisements/user/20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"advertisements",
+										"user",
+										"20"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "VEHICLE MANAGEMENT",
+					"item": [
+						{
+							"name": "GET VEHICLE ALL SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4MjQwNiwiZXhwIjoxNzQ1NDgyNDY2fQ.FqIo592WOuEQblEzt16I7SRqyHWgKd2D8xOGYnCfRg8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST VEHICLE SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc0NzQwNSwiZXhwIjoxNzQ1NzUxMDA1fQ.hvBgm-Wxpb1nQOgFT9D5hMdy3R6pFDQi71dMrbv1Ih8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"gr\",\r\n  \"year\": 2020,\r\n  \"price\": 100000.0,\r\n  \"fuelType\": \"DIESEL\",\r\n  \"transmission\": \"MANUAL\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 25000,\r\n  \"power\": 170,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota GR 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"NEW\",\r\n  \"hasWarranty\": false,\r\n  \"advertisementId\": 72\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT VEHICLE SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4MjQ4MCwiZXhwIjoxNzQ1NDgyNTQwfQ.en-9UBCrIwQTNA_tCrzsTRhZXaJrgcM80pTaZYe3uLg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota GR\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 70\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE VEHICLE SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4MjU4MywiZXhwIjoxNzQ1NDgyNjQzfQ.q51J0A_d8E617sTj7U-enOpyBIEiE9kDPfj-i_C6g6A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE BY ID SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4MjQ4MCwiZXhwIjoxNzQ1NDgyNTQwfQ.en-9UBCrIwQTNA_tCrzsTRhZXaJrgcM80pTaZYe3uLg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE BY USER SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTUwNzkzMCwiZXhwIjoxNzQ1NTExNTMwfQ.IoUrvEgA5ENrWa1K8koYkxLMRJIhqB0nEtYK4bfiE1M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/user/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"user",
+										"16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE FILTRED SPECIFIC USER",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTUwNzkzMCwiZXhwIjoxNzQ1NTExNTMwfQ.IoUrvEgA5ENrWa1K8koYkxLMRJIhqB0nEtYK4bfiE1M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/filter?brand=BMW&minPrice=10000&maxPrice=60000&fuelType=Diesel&color=Black",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "brand",
+											"value": "BMW"
+										},
+										{
+											"key": "minPrice",
+											"value": "10000"
+										},
+										{
+											"key": "maxPrice",
+											"value": "60000"
+										},
+										{
+											"key": "fuelType",
+											"value": "Diesel"
+										},
+										{
+											"key": "color",
+											"value": "Black"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE ALL SORTED PRICE SPECIFIC USER",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTUwNzkzMCwiZXhwIjoxNzQ1NTExNTMwfQ.IoUrvEgA5ENrWa1K8koYkxLMRJIhqB0nEtYK4bfiE1M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/sorted?sortBy=price&order=dsc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"sorted"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "price"
+										},
+										{
+											"key": "order",
+											"value": "dsc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE ALL SORTED MILEAGE SPECIFIC USER",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTUwNzkzMCwiZXhwIjoxNzQ1NTExNTMwfQ.IoUrvEgA5ENrWa1K8koYkxLMRJIhqB0nEtYK4bfiE1M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/sorted?sortBy=mileage&order=dsc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"sorted"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "mileage"
+										},
+										{
+											"key": "order",
+											"value": "dsc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PHOTO MANAGEMENT",
+					"item": [
+						{
+							"name": "GET PHOTO ALL SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4NDU0NCwiZXhwIjoxNzQ1NDg0NjA0fQ.C23h0MFFGPcH9LknF0h40nRjcGg3H1V-q5rOock7UVU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/photos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET PHOTO BY ID SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4NDU0NCwiZXhwIjoxNzQ1NDg0NjA0fQ.C23h0MFFGPcH9LknF0h40nRjcGg3H1V-q5rOock7UVU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/7/photos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"7",
+										"photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE PHOTO BY ID SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4NDU0NCwiZXhwIjoxNzQ1NDg0NjA0fQ.C23h0MFFGPcH9LknF0h40nRjcGg3H1V-q5rOock7UVU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/photos/11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"photos",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST PHOTO SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTQ4NDUxMCwiZXhwIjoxNzQ1NDg0NTcwfQ.yC8pIzg0Gd39Oo3Cf6tHfAGQniEjJ5Mf7TtnSfPrxDY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "vehicleId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "isMain",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/Hubert/Desktop/images.jpg"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user-page/vehicles/7/photos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"vehicles",
+										"7",
+										"photos"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER MANAGEMENT",
+					"item": [
+						{
+							"name": "GET FAVS USER ADS SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc2MjQyNiwiZXhwIjoxNzQ1NzY2MDI2fQ.a7n8b15ZUaCSgXDfxBUWw28tcCS4OISGUHKs7zGXhmM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/favorites",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"favorites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST FAVS USER ADS SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc2MjQyNiwiZXhwIjoxNzQ1NzY2MDI2fQ.a7n8b15ZUaCSgXDfxBUWw28tcCS4OISGUHKs7zGXhmM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/favorites/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"favorites",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE FAVS USER ADS SPECIFIC USER",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc2MjQyNiwiZXhwIjoxNzQ1NzY2MDI2fQ.a7n8b15ZUaCSgXDfxBUWw28tcCS4OISGUHKs7zGXhmM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user-page/favorites/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user-page",
+										"favorites",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET STATS USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTc0OTgxNCwiZXhwIjoxNzQ1NzUzNDE0fQ.xD72NXgQarUSvms4_96aEqQqkDILSsIRpkkd5uxF6uE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user-page/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user-page",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VEHICLE",
+			"item": [
+				{
+					"name": "POST VEHICLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLE ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLE FILTRED",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/filter?brand=BMW&minPrice=10000&maxPrice=60000&fuelType=Diesel&color=Black",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "brand",
+									"value": "BMW"
+								},
+								{
+									"key": "minPrice",
+									"value": "10000"
+								},
+								{
+									"key": "maxPrice",
+									"value": "60000"
+								},
+								{
+									"key": "fuelType",
+									"value": "Diesel"
+								},
+								{
+									"key": "color",
+									"value": "Black"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLE ALL SORTED PRICE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/sorted?sortBy=price&order=dsc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"sorted"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "price"
+								},
+								{
+									"key": "order",
+									"value": "dsc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLE ALL SORTED MILEAGE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/sorted?sortBy=mileage&order=dsc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"sorted"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": "mileage"
+								},
+								{
+									"key": "order",
+									"value": "dsc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET VEHICLE BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE VEHICLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT VEHICLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"brand\": \"Toyota GR\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vehicles/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vehicles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADVERTISMENT",
+			"item": [
+				{
+					"name": "POST ADVERTISMENT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Idealny pojazd dla rodziny – sprawdź ofertę\", \r\n  \"userId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/advertisements",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advertisements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE ADVERTISMENT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Super EKSTRA auto na sprzedaż\",\r\n  \"userId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/advertisements/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advertisements",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ADVERTISMENT ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDQxMzAsImV4cCI6MTc0NTUwNzczMH0.4VYEKUSSyHnjONr3ktfiltam-AaeWJtkXOK4LKkEj44",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Super EKSTRA auto na sprzedaż\",\r\n  \"userId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/advertisements?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advertisements"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ADVERTISMENT BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Super EKSTRA auto na sprzedaż\",\r\n  \"userId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/advertisements/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advertisements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT ADVERTISMENT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGljZV9zbWl0aCIsInJvbGVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE3NDAwNTMxODQsImV4cCI6MTc0MDA1MzI0NH0.soENkLnpgp2cZh3OiC8_dcgzffQZEFv7aSdVtX1GrYE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Super EKSTRA auto na sprzedaż\",\r\n  \"userId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/advertisements/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"advertisements",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SECURITY",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testuser17\",\r\n    \"password\": \"securepassword17\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD REQUEST",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"wofiyo9320@exclussi.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/email/reset-password-request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"email",
+								"reset-password-request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"5e662f26-e3da-4aaa-a7c3-45aea615bea0\",\r\n  \"newPassword\": \"securepassword1600\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/email/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"email",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH ACCESS TOKEN",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"alice_smith\",\r\n    \"password\": \"alicepassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjIwIiwicm9sZXMiOlsiUk9MRV9VU0VSIl0sImlhdCI6MTc0NTUwODkwNywiZXhwIjoxNzQ1NTEyNTA3fQ.d_omykx3gF55_pydiSTZRVr1JqS9zlVfEnWOKNPgpH8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"testuser20\",\r\n  \"email\": \"pamehit240@f5url.com\",\r\n  \"password\": \"securepassword20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN_PAGE",
+			"item": [
+				{
+					"name": "ADVERTISMENT MANAGEMENT",
+					"item": [
+						{
+							"name": "GET ADVERTISMENT ALL ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU0NzQsImV4cCI6MTc0NTUwOTA3NH0.z8tL_ODuPXSih39hZ5cW6NvAQyy6oKB2QAFfheftwlA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/advertisements?page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"advertisements"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ADVERTISMENT BY USER ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDg0ODMsImV4cCI6MTc0NTUxMjA4M30.eWfyw-kA7jayBxWCkpLO2h4STvo3q7pMPg3Gc03CEaQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/advertisements/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"advertisements",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST ADVERTISMENT ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"XD Idealny pojazd dla rodziny – sprawdź ofertę\", \r\n  \"userId\": 22\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/advertisements",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"advertisements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET ADVERTISMENT BY ID ADMIN",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/advertisements/22",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"advertisements",
+										"22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT ADVERTISMENT ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"aaaaaaa Super EKSTRA XD auto na sprzedaż\",\r\n  \"userId\": 26\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/advertisements/71",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"advertisements",
+										"71"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE ADVERTISMENT ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/advertisements/71",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"advertisements",
+										"71"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "VEHICLE MANAGEMENT",
+					"item": [
+						{
+							"name": "GET VEHICLES ALL ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLES BY USER ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDY2MzIsImV4cCI6MTc0NTUxMDIzMn0.8SwryFe9nIrK8EIJNgM-DHh2XPEZgb6whOQ24Grtcz0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST VEHICLES ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 68\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT VEHICLES ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"XXXToyota GR\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 68\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE VEHICLES ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLES BY ID ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDU3NjgsImV4cCI6MTc0NTUwOTM2OH0.eyXWO7tcvfzgwtN5i0Be7m2XjKjoVUW5lvnOTSnemBc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE FILTRED ADMIN",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDY2MzIsImV4cCI6MTc0NTUxMDIzMn0.8SwryFe9nIrK8EIJNgM-DHh2XPEZgb6whOQ24Grtcz0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/filter?brand=BMW&minPrice=10000&maxPrice=60000&fuelType=Diesel&color=Black",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "brand",
+											"value": "BMW"
+										},
+										{
+											"key": "minPrice",
+											"value": "10000"
+										},
+										{
+											"key": "maxPrice",
+											"value": "60000"
+										},
+										{
+											"key": "fuelType",
+											"value": "Diesel"
+										},
+										{
+											"key": "color",
+											"value": "Black"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE ALL SORTED PRICE ADMIN",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDgxNTUsImV4cCI6MTc0NTUxMTc1NX0.rswPUgVqcTMRC-ilgALTGxr8gHCpSPa8vGyn_476kCA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/sorted?sortBy=price&order=dsc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"sorted"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "price"
+										},
+										{
+											"key": "order",
+											"value": "dsc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET VEHICLE ALL SORTED MILEAGE ADMIN",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDgxNTUsImV4cCI6MTc0NTUxMTc1NX0.rswPUgVqcTMRC-ilgALTGxr8gHCpSPa8vGyn_476kCA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"brand\": \"Toyota\",\r\n  \"model\": \"Corolla\",\r\n  \"year\": 2020,\r\n  \"price\": 80000.0,\r\n  \"fuelType\": \"PETROL\",\r\n  \"transmission\": \"AUTOMATIC\",\r\n  \"color\": \"Red\",\r\n  \"mileage\": 15000,\r\n  \"power\": 130,\r\n  \"seats\": 5,\r\n  \"description\": \"Toyota Corolla 2020, jak nowa!\",\r\n  \"vin\": \"XYZ1234567890ABC\",\r\n  \"condition\": \"USED\",\r\n  \"hasWarranty\": true,\r\n  \"advertisementId\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicles/sorted?sortBy=mileage&order=dsc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicles",
+										"sorted"
+									],
+									"query": [
+										{
+											"key": "sortBy",
+											"value": "mileage"
+										},
+										{
+											"key": "order",
+											"value": "dsc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PHOTO MANAGEMENT",
+					"item": [
+						{
+							"name": "GET PHOTO ALL ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDY2MzIsImV4cCI6MTc0NTUxMDIzMn0.8SwryFe9nIrK8EIJNgM-DHh2XPEZgb6whOQ24Grtcz0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicle-photos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicle-photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET PHOTO BY ID ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDY2MzIsImV4cCI6MTc0NTUxMDIzMn0.8SwryFe9nIrK8EIJNgM-DHh2XPEZgb6whOQ24Grtcz0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicle-photos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicle-photos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE PHOTO BY ID ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDY2MzIsImV4cCI6MTc0NTUxMDIzMn0.8SwryFe9nIrK8EIJNgM-DHh2XPEZgb6whOQ24Grtcz0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicle-photos/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicle-photos",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST PHOTO SPECIFIC ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDY2MzIsImV4cCI6MTc0NTUxMDIzMn0.8SwryFe9nIrK8EIJNgM-DHh2XPEZgb6whOQ24Grtcz0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "vehicleId",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "isMain",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/Hubert/Desktop/a8.jpg"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/vehicle-photos/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"vehicle-photos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USER MANAGMENT",
+					"item": [
+						{
+							"name": "GET USER ALL ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDQxMzAsImV4cCI6MTc0NTUwNzczMH0.4VYEKUSSyHnjONr3ktfiltam-AaeWJtkXOK4LKkEj44",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE USER ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDQxMzAsImV4cCI6MTc0NTUwNzczMH0.4VYEKUSSyHnjONr3ktfiltam-AaeWJtkXOK4LKkEj44",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET USER BY ID ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDQxMzAsImV4cCI6MTc0NTUwNzczMH0.4VYEKUSSyHnjONr3ktfiltam-AaeWJtkXOK4LKkEj44",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST USER ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDQxMzAsImV4cCI6MTc0NTUwNzczMH0.4VYEKUSSyHnjONr3ktfiltam-AaeWJtkXOK4LKkEj44",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"testuser26\",\r\n  \"email\": \"jahane5311@cxnlab.com\",\r\n  \"password\": \"securepassword26\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT USER ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1MDQxMzAsImV4cCI6MTc0NTUwNzczMH0.4VYEKUSSyHnjONr3ktfiltam-AaeWJtkXOK4LKkEj44",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"testuser25XD\",\r\n  \"email\": \"cabaway993@cxnlabxd.com\",\r\n  \"password\": \"securepassword25\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/31",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"31"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET FAVS USER ADS ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU3NjMwNjQsImV4cCI6MTc0NTc2NjY2NH0.-awuk-i0Cmk0qoyPKhKfw5-EKE3E78BcXkAvnzJ8at4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/26/favorites",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"26",
+										"favorites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST FAVS USER ADS ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU3NjMwNjQsImV4cCI6MTc0NTc2NjY2NH0.-awuk-i0Cmk0qoyPKhKfw5-EKE3E78BcXkAvnzJ8at4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/26/favorites/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"26",
+										"favorites",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE FAVS USER ADS ADMIN",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU3NjMwNjQsImV4cCI6MTc0NTc2NjY2NH0.-awuk-i0Cmk0qoyPKhKfw5-EKE3E78BcXkAvnzJ8at4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/admin-page/users/26/favorites/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"admin-page",
+										"users",
+										"26",
+										"favorites",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GET STATS ADMIN",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0dXNlcjE3Iiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NDU1ODY1NzQsImV4cCI6MTc0NTU5MDE3NH0.AeluGtbEXlEvjK_CvrJO5EovFOEdJiONq_OBw56R_hc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/admin-page/dashboard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin-page",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,2643 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- description: Generated server url
+  url: http://localhost:8080
+paths:
+  /vehicles/{id}:
+    delete:
+      operationId: deleteVehicle
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - vehicle-controller
+      x-accepts: application/json
+    get:
+      operationId: getVehicleById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - vehicle-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateVehicle
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - vehicle-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /users/{id}:
+    delete:
+      operationId: deleteUser
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: application/json
+    get:
+      operationId: getUserById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDto'
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateUser
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDto'
+          description: OK
+      tags:
+      - user-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /user-page/vehicles/{id}:
+    delete:
+      operationId: deleteUserVehicle
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: application/json
+    get:
+      operationId: getUserVehicleById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateUserVehicle
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /user-page/advertisements/{id}:
+    delete:
+      operationId: deleteUserAdvertisement
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: application/json
+    get:
+      operationId: getUserAdvertisementById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdvertisementDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateUserAdvertisement
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvertisementDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdvertisementDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /advertisements/{id}:
+    delete:
+      operationId: deleteAdvertisement
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - advertisement-controller
+      x-accepts: application/json
+    get:
+      operationId: getAdvertisementById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Advertisement'
+          description: OK
+      tags:
+      - advertisement-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateAdvertisement
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvertisementDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Advertisement'
+          description: OK
+      tags:
+      - advertisement-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/vehicles/{id}:
+    delete:
+      operationId: deleteVehicle_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: application/json
+    get:
+      operationId: getVehicleById_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateVehicle_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/users/{id}:
+    delete:
+      operationId: deleteUser_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: application/json
+    get:
+      operationId: getUserById_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateUser_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/advertisements/{id}:
+    delete:
+      operationId: deleteAdvertisement_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: application/json
+    get:
+      operationId: getAdvertisementById_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdvertisementDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+    put:
+      operationId: updateAdvertisement_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvertisementDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdvertisementDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /vehicles:
+    get:
+      operationId: getVehicles
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - vehicle-controller
+      x-accepts: '*/*'
+    post:
+      operationId: createVehicle
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - vehicle-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /vehicle-photos:
+    get:
+      operationId: getAllPhotos
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehiclePhotoDto'
+                type: array
+          description: OK
+      tags:
+      - vehicle-photo-controller
+      x-accepts: '*/*'
+    post:
+      operationId: addPhotoToVehicle
+      parameters:
+      - explode: true
+        in: query
+        name: vehicleId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: isMain
+        required: true
+        schema:
+          type: boolean
+        style: form
+      - explode: true
+        in: query
+        name: username
+        required: true
+        schema:
+          type: string
+        style: form
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object'
+        content:
+          application/json:
+            schema:
+              properties:
+                photo:
+                  format: binary
+                  type: string
+              required:
+              - photo
+              type: object
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehiclePhoto'
+          description: OK
+      tags:
+      - vehicle-photo-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /users/{userId}/favorites/{advertisementId}:
+    delete:
+      operationId: removeFromFavorites
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      - explode: false
+        in: path
+        name: advertisementId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: '*/*'
+    post:
+      operationId: addToFavorites
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      - explode: false
+        in: path
+        name: advertisementId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: '*/*'
+  /users/register:
+    post:
+      operationId: createUser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDto'
+          description: OK
+      tags:
+      - user-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /users/refresh-token:
+    post:
+      operationId: refreshToken
+      parameters:
+      - explode: true
+        in: cookie
+        name: refreshToken
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: '*/*'
+  /users/logout:
+    post:
+      operationId: logout
+      responses:
+        "200":
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: application/json
+  /users/login:
+    post:
+      operationId: login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                additionalProperties:
+                  type: string
+                type: object
+          description: OK
+      tags:
+      - user-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /user-page/vehicles:
+    get:
+      operationId: getUserVehicles
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: createUserVehicle
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /user-page/vehicles/{vehicleId}/photos:
+    get:
+      operationId: getVehiclePhotos
+      parameters:
+      - explode: false
+        in: path
+        name: vehicleId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehiclePhotoDto'
+                type: array
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: uploadPhotoToVehicle
+      parameters:
+      - explode: false
+        in: path
+        name: vehicleId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      - explode: true
+        in: query
+        name: isMain
+        required: false
+        schema:
+          default: false
+          type: boolean
+        style: form
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_1'
+        content:
+          application/json:
+            schema:
+              properties:
+                photo:
+                  format: binary
+                  type: string
+              required:
+              - photo
+              type: object
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehiclePhotoDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /user-page/favorites/{advertisementId}:
+    delete:
+      operationId: removeFromFavorites_1
+      parameters:
+      - explode: false
+        in: path
+        name: advertisementId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: addToFavorites_1
+      parameters:
+      - explode: false
+        in: path
+        name: advertisementId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+  /user-page/advertisements:
+    get:
+      operationId: getUserAdvertisements
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          default: 0
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          default: 50
+          format: int32
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/PageAdvertisementDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: createUserAdvertisement
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvertisementDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdvertisementDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /api/email/reset-password:
+    post:
+      operationId: resetPassword
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - email-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /api/email/reset-password-request:
+    post:
+      operationId: resetPasswordRequest
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EmailDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - email-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /advertisements:
+    get:
+      operationId: getAdvertisements
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: size
+        required: false
+        schema:
+          default: 50
+          format: int32
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/PageAdvertisementDto'
+          description: OK
+      tags:
+      - advertisement-controller
+      x-accepts: '*/*'
+    post:
+      operationId: createAdvertisement
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvertisementDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Advertisement'
+          description: OK
+      tags:
+      - advertisement-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/vehicles:
+    get:
+      operationId: getAllVehicles
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: createVehicle_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VehicleDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehicleDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/vehicle-photos/{vehicleId}:
+    post:
+      operationId: addPhotoToVehicle_1
+      parameters:
+      - explode: false
+        in: path
+        name: vehicleId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      - explode: true
+        in: query
+        name: isMain
+        required: true
+        schema:
+          type: boolean
+        style: form
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_2'
+        content:
+          application/json:
+            schema:
+              properties:
+                photo:
+                  format: binary
+                  type: string
+              required:
+              - photo
+              type: object
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehiclePhotoDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/users/{userId}/favorites/{advertisementId}:
+    delete:
+      operationId: removeFromFavorites_2
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      - explode: false
+        in: path
+        name: advertisementId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: addToFavorites_2
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      - explode: false
+        in: path
+        name: advertisementId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/users/register:
+    post:
+      operationId: createUser_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /admin-page/advertisements:
+    get:
+      operationId: getAllAdvertisements
+      parameters:
+      - explode: true
+        in: query
+        name: pageable
+        required: true
+        schema:
+          $ref: '#/components/schemas/Pageable'
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/PageAdvertisementDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+    post:
+      operationId: createAdvertisement_1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdvertisementDto'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdvertisementDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-contentType: application/json
+      x-accepts: '*/*'
+  /vehicles/sorted:
+    get:
+      operationId: getSortedVehicles
+      parameters:
+      - explode: true
+        in: query
+        name: sortBy
+        required: true
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: order
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - vehicle-controller
+      x-accepts: '*/*'
+  /vehicles/filter:
+    get:
+      operationId: getFilteredVehicles
+      parameters:
+      - explode: true
+        in: query
+        name: brand
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: model
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: year
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: minPrice
+        required: false
+        schema:
+          format: double
+          type: number
+        style: form
+      - explode: true
+        in: query
+        name: maxPrice
+        required: false
+        schema:
+          format: double
+          type: number
+        style: form
+      - explode: true
+        in: query
+        name: minMileage
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: maxMileage
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: fuelType
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: transmission
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - vehicle-controller
+      x-accepts: '*/*'
+  /vehicle-photos/{id}:
+    delete:
+      operationId: deletePhoto
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - vehicle-photo-controller
+      x-accepts: application/json
+    get:
+      operationId: getPhotoById
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehiclePhotoDto'
+          description: OK
+      tags:
+      - vehicle-photo-controller
+      x-accepts: '*/*'
+  /users:
+    get:
+      operationId: getAllUsers
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/UserDto'
+                type: array
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: '*/*'
+  /users/{userId}/favorites:
+    get:
+      operationId: getFavorites
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  format: int64
+                  type: integer
+                type: array
+          description: OK
+      tags:
+      - user-controller
+      x-accepts: '*/*'
+  /user-page/photos:
+    get:
+      operationId: getAllUserPhotos
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehiclePhotoDto'
+                type: array
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+  /user-page/favorites:
+    get:
+      operationId: getFavorites_1
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  format: int64
+                  type: integer
+                type: array
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+  /user-page/dashboard:
+    get:
+      operationId: getUserDashboard
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/UserPageDto'
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: '*/*'
+  /api/email/verify:
+    get:
+      operationId: verifyEmail
+      parameters:
+      - explode: true
+        in: query
+        name: token
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                type: string
+          description: OK
+      tags:
+      - email-controller
+      x-accepts: '*/*'
+  /admin-page/vehicles/user/{userId}:
+    get:
+      operationId: getVehiclesByUser
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/vehicles/sorted:
+    get:
+      operationId: getSortedVehicles_1
+      parameters:
+      - explode: true
+        in: query
+        name: sortBy
+        required: true
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: order
+        required: true
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/vehicles/filter:
+    get:
+      operationId: getFilteredVehicles_1
+      parameters:
+      - explode: true
+        in: query
+        name: brand
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: model
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: year
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: minPrice
+        required: false
+        schema:
+          format: double
+          type: number
+        style: form
+      - explode: true
+        in: query
+        name: maxPrice
+        required: false
+        schema:
+          format: double
+          type: number
+        style: form
+      - explode: true
+        in: query
+        name: minMileage
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: maxMileage
+        required: false
+        schema:
+          format: int32
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: fuelType
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: transmission
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehicleDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/vehicle-photos:
+    get:
+      operationId: getAllPhotos_1
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/VehiclePhotoDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/vehicle-photos/{id}:
+    delete:
+      operationId: deletePhoto_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: application/json
+    get:
+      operationId: getPhotoById_1
+      parameters:
+      - explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/VehiclePhotoDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/users:
+    get:
+      operationId: getAllUsers_1
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/UserDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/users/{userId}/favorites:
+    get:
+      operationId: getFavorites_2
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  format: int64
+                  type: integer
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/dashboard:
+    get:
+      operationId: getDashboard
+      parameters:
+      - explode: true
+        in: query
+        name: start
+        required: false
+        schema:
+          type: string
+        style: form
+      - explode: true
+        in: query
+        name: end
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/AdminPageDto'
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /admin-page/advertisements/user/{userId}:
+    get:
+      operationId: getAdvertisementsByUser
+      parameters:
+      - explode: false
+        in: path
+        name: userId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/AdvertisementDto'
+                type: array
+          description: OK
+      tags:
+      - admin-page-controller
+      x-accepts: '*/*'
+  /user-page/photos/{photoId}:
+    delete:
+      operationId: deleteVehiclePhoto
+      parameters:
+      - explode: false
+        in: path
+        name: photoId
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: OK
+      tags:
+      - user-page-controller
+      x-accepts: application/json
+components:
+  requestBodies:
+    inline_object_1:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_1'
+    inline_object:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object'
+    inline_object_2:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_2'
+  schemas:
+    VehicleDto:
+      example:
+        color: color
+        year: 6
+        description: description
+        seats: 2
+        hasWarranty: true
+        advertisementId: 7
+        condition: NEW
+        transmission: MANUAL
+        fuelType: PETROL
+        price: 1.4658129805029452
+        model: model
+        vin: vin
+        id: 0
+        power: 0
+        brand: brand
+        mileage: 5
+      properties:
+        id:
+          format: int64
+          type: integer
+        brand:
+          maxLength: 50
+          minLength: 1
+          type: string
+        model:
+          maxLength: 50
+          minLength: 1
+          type: string
+        year:
+          format: int32
+          type: integer
+        price:
+          format: double
+          type: number
+        fuelType:
+          enum:
+          - PETROL
+          - DIESEL
+          - LPG
+          - ELECTRIC
+          - HYBRID
+          type: string
+        transmission:
+          enum:
+          - MANUAL
+          - AUTOMATIC
+          type: string
+        color:
+          maxLength: 20
+          minLength: 1
+          type: string
+        mileage:
+          format: int32
+          type: integer
+        power:
+          format: int32
+          minimum: 0
+          type: integer
+        seats:
+          format: int32
+          maximum: 8
+          minimum: 1
+          type: integer
+        description:
+          maxLength: 2000
+          minLength: 0
+          type: string
+        vin:
+          maxLength: 17
+          minLength: 17
+          type: string
+        condition:
+          enum:
+          - NEW
+          - USED
+          - DAMAGED
+          type: string
+        hasWarranty:
+          type: boolean
+        advertisementId:
+          format: int64
+          type: integer
+      required:
+      - advertisementId
+      - brand
+      - color
+      - condition
+      - fuelType
+      - hasWarranty
+      - model
+      - price
+      - transmission
+      - vin
+      - year
+      type: object
+    UserDto:
+      example:
+        password: password
+        role: ADMIN
+        id: 0
+        email: email
+        username: username
+      properties:
+        id:
+          format: int64
+          type: integer
+        username:
+          maxLength: 20
+          minLength: 3
+          type: string
+        email:
+          type: string
+        password:
+          maxLength: 2147483647
+          minLength: 6
+          type: string
+        role:
+          enum:
+          - ADMIN
+          - USER
+          - GUEST
+          type: string
+      required:
+      - email
+      - password
+      - username
+      type: object
+    AdvertisementDto:
+      example:
+        id: 0
+        title: title
+        userId: 6
+      properties:
+        id:
+          format: int64
+          type: integer
+        title:
+          maxLength: 100
+          minLength: 10
+          type: string
+        userId:
+          format: int64
+          type: integer
+      required:
+      - title
+      type: object
+    Advertisement:
+      example:
+        id: 0
+        title: title
+        user:
+          favorites:
+          - 1
+          - 1
+          advertisements:
+          - null
+          - null
+          password: password
+          role: ADMIN
+          credentialsNonExpired: true
+          accountNonExpired: true
+          id: 6
+          email: email
+          enabled: true
+          authorities:
+          - authority: authority
+          - authority: authority
+          username: username
+          accountNonLocked: true
+      properties:
+        id:
+          format: int64
+          type: integer
+        title:
+          type: string
+        user:
+          $ref: '#/components/schemas/User'
+      type: object
+    GrantedAuthority:
+      example:
+        authority: authority
+      properties:
+        authority:
+          type: string
+      type: object
+    User:
+      example:
+        favorites:
+        - 1
+        - 1
+        advertisements:
+        - null
+        - null
+        password: password
+        role: ADMIN
+        credentialsNonExpired: true
+        accountNonExpired: true
+        id: 6
+        email: email
+        enabled: true
+        authorities:
+        - authority: authority
+        - authority: authority
+        username: username
+        accountNonLocked: true
+      properties:
+        id:
+          format: int64
+          type: integer
+        advertisements:
+          items:
+            $ref: '#/components/schemas/Advertisement'
+          type: array
+        username:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        role:
+          enum:
+          - ADMIN
+          - USER
+          - GUEST
+          type: string
+        enabled:
+          type: boolean
+        favorites:
+          items:
+            format: int64
+            type: integer
+          type: array
+        authorities:
+          items:
+            $ref: '#/components/schemas/GrantedAuthority'
+          type: array
+        accountNonExpired:
+          type: boolean
+        accountNonLocked:
+          type: boolean
+        credentialsNonExpired:
+          type: boolean
+      type: object
+    Vehicle:
+      example:
+        color: color
+        year: 1
+        description: description
+        seats: 7
+        hasWarranty: true
+        condition: NEW
+        transmission: MANUAL
+        fuelType: PETROL
+        price: 5.962133916683182
+        advertisement:
+          id: 0
+          title: title
+          user:
+            favorites:
+            - 1
+            - 1
+            advertisements:
+            - null
+            - null
+            password: password
+            role: ADMIN
+            credentialsNonExpired: true
+            accountNonExpired: true
+            id: 6
+            email: email
+            enabled: true
+            authorities:
+            - authority: authority
+            - authority: authority
+            username: username
+            accountNonLocked: true
+        model: model
+        vin: vin
+        id: 6
+        power: 2
+        brand: brand
+        mileage: 5
+      properties:
+        id:
+          format: int64
+          type: integer
+        brand:
+          type: string
+        model:
+          type: string
+        year:
+          format: int32
+          type: integer
+        price:
+          format: double
+          type: number
+        fuelType:
+          enum:
+          - PETROL
+          - DIESEL
+          - LPG
+          - ELECTRIC
+          - HYBRID
+          type: string
+        transmission:
+          enum:
+          - MANUAL
+          - AUTOMATIC
+          type: string
+        color:
+          type: string
+        mileage:
+          format: int32
+          type: integer
+        power:
+          format: int32
+          type: integer
+        seats:
+          format: int32
+          type: integer
+        description:
+          type: string
+        vin:
+          type: string
+        condition:
+          enum:
+          - NEW
+          - USED
+          - DAMAGED
+          type: string
+        hasWarranty:
+          type: boolean
+        advertisement:
+          $ref: '#/components/schemas/Advertisement'
+      type: object
+    VehiclePhoto:
+      example:
+        photoUrl: photoUrl
+        isMain: true
+        id: 0
+        vehicle:
+          color: color
+          year: 1
+          description: description
+          seats: 7
+          hasWarranty: true
+          condition: NEW
+          transmission: MANUAL
+          fuelType: PETROL
+          price: 5.962133916683182
+          advertisement:
+            id: 0
+            title: title
+            user:
+              favorites:
+              - 1
+              - 1
+              advertisements:
+              - null
+              - null
+              password: password
+              role: ADMIN
+              credentialsNonExpired: true
+              accountNonExpired: true
+              id: 6
+              email: email
+              enabled: true
+              authorities:
+              - authority: authority
+              - authority: authority
+              username: username
+              accountNonLocked: true
+          model: model
+          vin: vin
+          id: 6
+          power: 2
+          brand: brand
+          mileage: 5
+      properties:
+        id:
+          format: int64
+          type: integer
+        photoUrl:
+          type: string
+        isMain:
+          type: boolean
+        vehicle:
+          $ref: '#/components/schemas/Vehicle'
+      type: object
+    VehiclePhotoDto:
+      example:
+        photoUrl: photoUrl
+        id: 0
+        vehicleId: 6
+      properties:
+        id:
+          format: int64
+          type: integer
+        photoUrl:
+          type: string
+        vehicleId:
+          format: int64
+          type: integer
+      type: object
+    EmailDto:
+      example:
+        newPassword: newPassword
+        email: email
+        token: token
+      properties:
+        token:
+          type: string
+        newPassword:
+          type: string
+        email:
+          type: string
+      type: object
+    UserPageDto:
+      example:
+        advertisementViews: 0
+        minAdvertisementPrice: 5.637376656633329
+        fuelTypeDistribution: fuelTypeDistribution
+        maxAdvertisementPrice: 2.3021358869347655
+        messageButtonClicks: 1
+        avgVehicleMileage: 9.301444243932576
+        usedVsNewVehiclesPercentage: 7.386281948385884
+        maxVehicleMileage: 2
+        avgAdvertisementPrice: 5.962133916683182
+        medianAdvertisementPrice: 7.061401241503109
+        minVehicleMileage: 3
+        callButtonClicks: 6
+        transmissionTypeDistribution: transmissionTypeDistribution
+        vehiclesWithWarranty: 4
+        timestamp: 2000-01-23T04:56:07.000+00:00
+      properties:
+        advertisementViews:
+          format: int64
+          type: integer
+        callButtonClicks:
+          format: int64
+          type: integer
+        messageButtonClicks:
+          format: int64
+          type: integer
+        avgAdvertisementPrice:
+          format: double
+          type: number
+        minAdvertisementPrice:
+          format: double
+          type: number
+        maxAdvertisementPrice:
+          format: double
+          type: number
+        medianAdvertisementPrice:
+          format: double
+          type: number
+        avgVehicleMileage:
+          format: double
+          type: number
+        minVehicleMileage:
+          format: int64
+          type: integer
+        maxVehicleMileage:
+          format: int64
+          type: integer
+        vehiclesWithWarranty:
+          format: int64
+          type: integer
+        usedVsNewVehiclesPercentage:
+          format: double
+          type: number
+        fuelTypeDistribution:
+          type: string
+        transmissionTypeDistribution:
+          type: string
+        timestamp:
+          format: date-time
+          type: string
+      type: object
+    PageAdvertisementDto:
+      example:
+        number: 5
+        size: 1
+        last: true
+        numberOfElements: 5
+        totalPages: 0
+        pageable:
+          paged: true
+          pageNumber: 7
+          offset: 2
+          pageSize: 9
+          unpaged: true
+          sort:
+          - nullHandling: nullHandling
+            ignoreCase: true
+            property: property
+            ascending: true
+            direction: direction
+          - nullHandling: nullHandling
+            ignoreCase: true
+            property: property
+            ascending: true
+            direction: direction
+        sort:
+        - nullHandling: nullHandling
+          ignoreCase: true
+          property: property
+          ascending: true
+          direction: direction
+        - nullHandling: nullHandling
+          ignoreCase: true
+          property: property
+          ascending: true
+          direction: direction
+        content:
+        - id: 0
+          title: title
+          userId: 6
+        - id: 0
+          title: title
+          userId: 6
+        first: true
+        totalElements: 6
+        empty: true
+      properties:
+        totalPages:
+          format: int32
+          type: integer
+        totalElements:
+          format: int64
+          type: integer
+        size:
+          format: int32
+          type: integer
+        content:
+          items:
+            $ref: '#/components/schemas/AdvertisementDto'
+          type: array
+        number:
+          format: int32
+          type: integer
+        sort:
+          items:
+            $ref: '#/components/schemas/SortObject'
+          type: array
+        first:
+          type: boolean
+        last:
+          type: boolean
+        numberOfElements:
+          format: int32
+          type: integer
+        pageable:
+          $ref: '#/components/schemas/PageableObject'
+        empty:
+          type: boolean
+      type: object
+    PageableObject:
+      example:
+        paged: true
+        pageNumber: 7
+        offset: 2
+        pageSize: 9
+        unpaged: true
+        sort:
+        - nullHandling: nullHandling
+          ignoreCase: true
+          property: property
+          ascending: true
+          direction: direction
+        - nullHandling: nullHandling
+          ignoreCase: true
+          property: property
+          ascending: true
+          direction: direction
+      properties:
+        unpaged:
+          type: boolean
+        offset:
+          format: int64
+          type: integer
+        sort:
+          items:
+            $ref: '#/components/schemas/SortObject'
+          type: array
+        pageNumber:
+          format: int32
+          type: integer
+        pageSize:
+          format: int32
+          type: integer
+        paged:
+          type: boolean
+      type: object
+    SortObject:
+      example:
+        nullHandling: nullHandling
+        ignoreCase: true
+        property: property
+        ascending: true
+        direction: direction
+      properties:
+        direction:
+          type: string
+        nullHandling:
+          type: string
+        ascending:
+          type: boolean
+        property:
+          type: string
+        ignoreCase:
+          type: boolean
+      type: object
+    AdminPageDto:
+      example:
+        totalUsers: 1
+        minVehiclePrice: 9.369310271410669
+        fuelTypeDistribution:
+        - fuelTypeDistribution
+        - fuelTypeDistribution
+        inactiveUsers: 4
+        messageButtonClicks: 5
+        avgVehicleMileage: 3.5571952270680973
+        totalVehicles: 6
+        maxVehicleMileage: 6
+        medianVehiclePrice: 8.762042012749001
+        homepageVisits: 0
+        activeUsersCount: 1
+        totalAdvertisements: 1
+        advertisementPageVisits: 1
+        top5Brands:
+        - top5Brands
+        - top5Brands
+        maxVehiclePrice: 6.683562403749608
+        top5Models:
+        - top5Models
+        - top5Models
+        searchPageVisits: 6
+        transmissionTypeDistribution:
+        - transmissionTypeDistribution
+        - transmissionTypeDistribution
+        vehiclesWithWarranty: 6
+        mostViewedAdvertisements: 7
+        dailyLogins: 2
+        activeUsers: 3
+        dailyRegistrations: 7
+        avgTimeSpentOnSite: 9.301444243932576
+        usersWithRoleAdmin: 7
+        usedVehicles: 2
+        avgAdvertisementsPerUser: 5.025004791520295
+        usersWithMostAdvertisements:
+        - usersWithMostAdvertisements
+        - usersWithMostAdvertisements
+        advertisementEditsOrDeletions: 4
+        newVehicles: 1
+        minVehicleMileage: 9
+        callButtonClicks: 5
+        usersWithRoleUser: 1
+        advertisementsAddedPerUser: 2
+        avgVehiclePrice: 9.965781217890562
+      properties:
+        homepageVisits:
+          format: int64
+          type: integer
+        searchPageVisits:
+          format: int64
+          type: integer
+        advertisementPageVisits:
+          format: int64
+          type: integer
+        callButtonClicks:
+          format: int64
+          type: integer
+        messageButtonClicks:
+          format: int64
+          type: integer
+        dailyLogins:
+          format: int64
+          type: integer
+        dailyRegistrations:
+          format: int64
+          type: integer
+        avgTimeSpentOnSite:
+          format: double
+          type: number
+        activeUsers:
+          format: int64
+          type: integer
+        advertisementsAddedPerUser:
+          format: int64
+          type: integer
+        advertisementEditsOrDeletions:
+          format: int64
+          type: integer
+        mostViewedAdvertisements:
+          format: int64
+          type: integer
+        totalUsers:
+          format: int64
+          type: integer
+        activeUsersCount:
+          format: int64
+          type: integer
+        totalAdvertisements:
+          format: int64
+          type: integer
+        totalVehicles:
+          format: int64
+          type: integer
+        usersWithRoleAdmin:
+          format: int64
+          type: integer
+        usersWithRoleUser:
+          format: int64
+          type: integer
+        inactiveUsers:
+          format: int64
+          type: integer
+        usersWithMostAdvertisements:
+          items:
+            type: string
+          type: array
+        avgAdvertisementsPerUser:
+          format: double
+          type: number
+        top5Brands:
+          items:
+            type: string
+          type: array
+        top5Models:
+          items:
+            type: string
+          type: array
+        fuelTypeDistribution:
+          items:
+            type: string
+          type: array
+        transmissionTypeDistribution:
+          items:
+            type: string
+          type: array
+        avgVehiclePrice:
+          format: double
+          type: number
+        minVehiclePrice:
+          format: double
+          type: number
+        maxVehiclePrice:
+          format: double
+          type: number
+        medianVehiclePrice:
+          format: double
+          type: number
+        minVehicleMileage:
+          format: int64
+          type: integer
+        maxVehicleMileage:
+          format: int64
+          type: integer
+        avgVehicleMileage:
+          format: double
+          type: number
+        vehiclesWithWarranty:
+          format: int64
+          type: integer
+        newVehicles:
+          format: int64
+          type: integer
+        usedVehicles:
+          format: int64
+          type: integer
+      type: object
+    Pageable:
+      properties:
+        page:
+          format: int32
+          minimum: 0
+          type: integer
+        size:
+          format: int32
+          minimum: 1
+          type: integer
+        sort:
+          items:
+            type: string
+          type: array
+      type: object
+    inline_object:
+      properties:
+        photo:
+          format: binary
+          type: string
+      required:
+      - photo
+      type: object
+    inline_object_1:
+      properties:
+        photo:
+          format: binary
+          type: string
+      required:
+      - photo
+      type: object
+    inline_object_2:
+      properties:
+        photo:
+          format: binary
+          type: string
+      required:
+      - photo
+      type: object
+
